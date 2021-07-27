@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-    padding-left: 35px;
+    padding-left: 50px;
 }
 
 .brand {
@@ -16,8 +16,13 @@
 
 .navbar-nav a {
     color: #fff;
-    font-weight: 600;
+    font-weight: 800;
     font-size: 15px;
+}
+
+.navbar-nav a:hover {
+    color: #bd46bd;
+    font-weight: 700;
 }
 
 .transparent {
@@ -28,7 +33,7 @@
     width: 100%;
     height: 550px;
     background: url("../../assets/images/desktop/image-hero.jpg"),
-            linear-gradient(to left,#611111, #9198e5);
+            linear-gradient(to left, #4D284D, #6e226e);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -36,7 +41,7 @@
 #capa {
   max-width: 500px;
   border: 1px solid #fff;
-  margin: 70px 0 0 40px;
+  margin: 70px 0 0 50px;
   z-index: 1;
   padding: 30px;
 }
@@ -51,4 +56,80 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+
+.container-area {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+
+.content-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.interactive-area {
+    position: relative;
+    padding-bottom: 0;
+    height: 600px;
+}
+
+.interactive-area img {
+    width: 70%;
+}
+
+.area-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50%;
+    width: 45%;
+    padding: 20px;
+    font-size: 15px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.creations {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.our-creations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.creations-galery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* ==== ÁREAS DOS BOTÕES ==== */
+.btn-see {
+    padding: 5px;
+    width: 120px;
+    border-radius: 2px;
+    border: 1px solid #000;
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    font-weight: 600;
+}
+
+.btn-see:hover {
+    background-color: #000;
+    color: #fff;
+    transition: background-color 1s;
 }
