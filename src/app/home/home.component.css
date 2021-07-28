@@ -14,15 +14,24 @@
     color: #fff;
 }
 
+.navbar-nav {
+    padding-left: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 10px;
+}
+
 .navbar-nav a {
     color: #fff;
-    font-weight: 800;
+    font-weight: 500;
     font-size: 15px;
 }
 
 .navbar-nav a:hover {
-    color: #bd46bd;
-    font-weight: 700;
+    /*color: #bd46bd;*/
+    color: rgba(219, 209, 217, 0.856);
     transition: all .5s;
 }
 
@@ -34,14 +43,18 @@
     width: 100%;
     height: 550px;
     background: url("../../assets/images/desktop/image-hero.jpg"),
-            linear-gradient(to left, #4D284D, #6e226e);
+                linear-gradient(to bottom, #4D284D, #6e226e);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
+/* linear-gradient(to left, #4D284D, #6e226e); */
+
+
+
 #capa {
   max-width: 500px;
-  border: 1px solid #fff;
+  border: 2.5px solid #fff;
   margin: 70px 0 0 50px;
   z-index: 1;
   padding: 30px;
@@ -63,10 +76,6 @@
     max-width: 1000px;
     margin: 0 auto;
     padding-top: 120px;
-}
-
-.container-total {
-    width: 100%;
 }
 
 .content-area {
@@ -101,6 +110,9 @@
     background-color: #fff;
 }
 
+/* -------------------------------------- */
+
+/* ===== SEÇÃO DAS CATEGORIAS ===== */
 .creations {
     display: flex;
     flex-direction: column;
@@ -120,7 +132,7 @@
     gap: 10px;
 }
 
-/* ==== ÁREAS DOS BOTÕES ==== */
+/* Área dos botões */
 .btn-see {
     padding: 5px;
     width: 120px;
@@ -178,23 +190,30 @@
     padding-left: 15px;
 }
 
+        /* ===== SEÇÃO DO RODAPÉ ===== */
 .footer {
-    display: flex;
     width: 100%;
-    height: 150px;
     background-color: #000;
     margin-top: 100px;
 }
 
+.content-footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Begin of the section in the left side of footer */
 .links-footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    padding: 20px 0;
-    padding-left: 13%;
 }
 
 .nav-footer a {
@@ -202,7 +221,6 @@
     color: #fff;
     margin-right: 10px;
     font-size: 15px;
-    font-weight: 800;
 }
 
 .nav-footer a:hover {
@@ -213,21 +231,23 @@
 .links-footer div {
     margin-bottom: 15px;
 }
+/* End of the section in the left side of footer */
 
+/* ------------------------------------------------------ */
+
+/* Begin of the section in the right side of footer */
 .redes-sociais {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    padding: 20px 0;
-    padding-right: 13%;
-    border: 1px solid green;
 }
 
 .area-icones {
     display: flex;
+    margin-bottom: 25px;
 }
 
 .area-icones a {
@@ -237,12 +257,35 @@
 .icone-rede {
     display: inline-block;
     width: 30px;
-    height: 15px;
 }
 
 .area-copy {
     color: #fff;
     font-size: 13px;
-    padding: 20px;
-    padding-right: 0;
+}
+/* End of the section in the right side of footer */
+
+
+
+
+@media screen and (max-width: 700px) {
+    .content-footer {
+        width: 100%;
+    }
+
+    .categorias {
+        grid-template-rows: repeat(4, 250px);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #header-home {
+        background-size: cover;
+        background-position: 50%;
+        height: 1000px;  
+    }
+
+    #capa {
+        margin: 0 auto;
+        margin-top: 250px;
+    }
 }
