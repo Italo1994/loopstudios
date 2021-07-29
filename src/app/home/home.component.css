@@ -30,8 +30,8 @@
 }
 
 .navbar-nav a:hover {
-    /*color: #bd46bd;*/
-    color: rgba(219, 209, 217, 0.856);
+    color: #611061;
+    /* color: rgba(219, 209, 217, 0.856); */
     transition: all .5s;
 }
 
@@ -162,6 +162,7 @@
 .img-categoria  {
     position: relative;
     background: linear-gradient(to bottom right, rgba(0,47,75,0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+    z-index: 1;
 }
 
 .img-categoria img {
@@ -268,24 +269,84 @@
 
 
 
-@media screen and (max-width: 700px) {
-    .content-footer {
-        width: 100%;
-    }
-
-    .categorias {
-        grid-template-rows: repeat(4, 250px);
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media screen and (max-width: 650px) {
 
     #header-home {
         background-size: cover;
         background-position: 50%;
-        height: 1000px;  
+        height: 750px;  
     }
 
     #capa {
         margin: 0 auto;
         margin-top: 250px;
+    }
+
+    .content-area {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .interactive-area {
+        height: auto;
+        position: static;
+    }
+
+    .interactive-area img {
+        width: 100%;
+    }
+
+    .area-texto {
+        height: auto;
+        width: 100%;
+        text-align: center;
+        position: static;
+    }
+
+    .categorias {
+        grid-template-rows: repeat(8, 180px);
+        grid-template-columns: 1fr;
+    }
+
+    .content-footer {
+        width: 100%;
+        margin: 0 auto;
+        padding: 40px 0;
+        display: grid;
+        grid-template-rows: 2fr;
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .categorias {
+        grid-template-rows: repeat(4, 180px);
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .img-categoria img {
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .interactive-area {
+        height: auto;
+        position: static;
+    }
+
+    .interactive-area img {
+        width: 100%;
+    }
+
+    .area-texto {
+        height: auto;
+        width: 100%;
+        text-align: center;
+        position: static;
     }
 }
